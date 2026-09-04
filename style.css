@@ -78,3 +78,43 @@ body {
     radial-gradient(at 0% 100%, rgba(139, 92, 246, 0.25) 0px, transparent 50%);
   background-attachment: fixed;
 }
+/* 1. Kích hoạt hiệu ứng cuộn mượt cho toàn trang */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. Cấu hình nền cố định khi lướt */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: white;
+  background-color: #0f172a;
+  /* Mẫu nền Mesh Gradient */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.3) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.3) 0px, transparent 50%);
+  background-attachment: fixed; /* Giữ nền đứng yên khi cuộn nội dung */
+}
+
+/* 3. Tạo khoảng cách chiều cao cho các đoạn nội dung */
+.section {
+  min-height: 100vh; /* Mỗi phần chiếm ít nhất 100% chiều cao màn hình */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* 4. Khung thẻ hiển thị nội dung */
+.card {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
